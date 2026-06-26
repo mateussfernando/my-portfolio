@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "pdf": "node scripts/generate-pdf.js"
+    "pdf": "node scripts/generate-pdf.js",
+    "screenshot": "npm run dev & sleep 5 && node scripts/screenshot.js"
   },
   "dependencies": {
     "lucide-react": "^1.21.0",

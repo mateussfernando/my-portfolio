@@ -7,17 +7,40 @@ const LanguageContext = createContext(undefined);
 export function LanguageProvider({ children }) {
   const [lang, setLang] = useState("pt");
 
-  // Prioridade na inicialização: parâmetro ?en na URL > localStorage > pt
+  // Prioridade na inicialização: subdomínio > parâmetro ?en > localStorage > pt
   useEffect(() => {
+    // 1. Detectar subdomínio (en.mateusfernando.com ou pt.mateusfernando.com)
+    const host = window.location.hostname;
+    const subdomain = host.split('.')[0];
+
+    if (subdomain === 'en') {
+      setLang("en");
+      window.localStorage.setItem("lang", "en");
+      return;
+    }
+    if (subdomain === 'pt') {
+      setLang("pt");
+      window.localStorage.setItem("lang", "pt");
+      return;
+    }
+
+    // 2. Detectar parâmetro ?en na URL
     const params = new URLSearchParams(window.location.search);
     if (params.has("en")) {
       setLang("en");
+      window.localStorage.setItem("lang", "en");
       return;
     }
+
+    // 3. Usar localStorage se disponível
     const saved = window.localStorage.getItem("lang");
     if (saved === "en" || saved === "pt") {
       setLang(saved);
+      return;
     }
+
+    // 4. Padrão: português
+    setLang("pt");
   }, []);
 
   const changeLang = (next) => {
