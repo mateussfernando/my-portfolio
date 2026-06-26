@@ -15,7 +15,7 @@ const T = {
 
 const CONTACTS = [
   { icon: Mail, label: "mateusfss368@gmail.com" },
-  { icon: Phone, label: "(81) 99999-9306" },
+  { icon: Phone, label: "(81) 99989-8306" },
   { icon: FaWhatsapp, label: "WhatsApp", href: "https://wa.me/5581999999306" }
 ];
 
