@@ -10,6 +10,7 @@ import {
   SiPostgresql, SiMongodb, SiSap, SiBruno, SiVercel
 } from "react-icons/si";
 import { TbBrandVscode, TbBrandAzure } from "react-icons/tb";
+import { useLanguage } from "@/context/LanguageContext";
 
 const SKILLS = [
   { name: "HTML5", icon: FaHtml5, color: "#E34F26" },
@@ -37,11 +38,14 @@ const SKILLS = [
 ];
 
 export default function SkillsSection() {
+  const { lang } = useLanguage();
+  const title = { pt: "Tecnologias e Ferramentas usadas", en: "Technologies & Tools used" };
+
   return (
     <section id="skills" className="relative max-w-7xl mx-auto px-6 py-32 space-y-12">
       <header className="space-y-4">
         <span className="font-space text-[10px] tracking-[0.5em] text-red-500 uppercase">TECH_STACK</span>
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white uppercase">Tecnologias e Ferramentas USADAS</h2>
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white uppercase">{title[lang]}</h2>
       </header>
 
       <div className="flex flex-wrap gap-3">

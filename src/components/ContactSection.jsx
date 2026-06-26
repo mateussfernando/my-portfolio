@@ -2,6 +2,16 @@
 
 import { Mail, Phone, FileText } from "lucide-react";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { useLanguage } from "@/context/LanguageContext";
+
+const T = {
+  title: { pt: <>Vamos construir <br /> o futuro?</>, en: <>Let&apos;s build <br /> the future?</> },
+  desc: {
+    pt: "Estou sempre aberto a novos desafios e colaborações inovadoras. Se você busca alguém para construir algo de impacto, vamos conversar.",
+    en: "I'm always open to new challenges and innovative collaborations. If you're looking for someone to build something impactful, let's talk."
+  },
+  resume: { pt: "Currículo (PDF)", en: "Resume (PDF)" }
+};
 
 const CONTACTS = [
   { icon: Mail, label: "mateusfss368@gmail.com" },
@@ -9,13 +19,15 @@ const CONTACTS = [
   { icon: FaWhatsapp, label: "WhatsApp", href: "https://wa.me/5581999999306" }
 ];
 
-const LINKS = [
-  { icon: FaGithub, label: "GitHub", href: "https://github.com/mateusfernando" },
-  { icon: FaLinkedin, label: "LinkedIn", href: "https://linkedin.com/in/mateussfernando" },
-  { icon: FileText, label: "Currículo (PDF)", href: "#" }
-];
-
 export default function ContactSection() {
+  const { lang } = useLanguage();
+
+  const LINKS = [
+    { icon: FaGithub, label: "GitHub", href: "https://github.com/mateusfernando" },
+    { icon: FaLinkedin, label: "LinkedIn", href: "https://linkedin.com/in/mateussfernando" },
+    { icon: FileText, label: T.resume[lang], href: "#" }
+  ];
+
   return (
     <footer
       id="contact"
@@ -27,12 +39,12 @@ export default function ContactSection() {
             CONTACT_CHANNEL
           </span>
           <h3 className="text-4xl md:text-6xl font-bold uppercase tracking-tight leading-[0.9]">
-            Vamos construir <br /> o futuro?
+            {T.title[lang]}
           </h3>
         </header>
 
           <p className="text-white text-center leading-relaxed">
-            Estou sempre aberto a novos desafios e colaborações inovadoras.  Se você busca alguém para construir algo de impacto, vamos conversar.
+            {T.desc[lang]}
           </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">

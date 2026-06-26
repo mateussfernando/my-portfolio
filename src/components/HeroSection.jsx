@@ -1,8 +1,19 @@
 'use client'
 
 import { motion } from "motion/react";
+import { useLanguage } from "@/context/LanguageContext";
+
+const T = {
+  role: { pt: "Desenvolvedor Web", en: "Web Developer" },
+  desc: {
+    pt: "Analista e Desenvolvedor de Sistemas, com foco em Desenvolvimento Web, focado em criar soluções tecnológicas que resolvem problemas reais.",
+    en: "Systems Analyst and Developer focused on Web Development, building technological solutions that solve real problems."
+  }
+};
 
 export default function HeroSection({ scale, opacity }) {
+  const { lang } = useLanguage();
+
   return (
     <section
       id="index"
@@ -72,7 +83,7 @@ export default function HeroSection({ scale, opacity }) {
               }}
               className="text-xl md:text-2xl font-space tracking-widest uppercase"
             >
-              Desenvolvedor Web
+              {T.role[lang]}
             </motion.p>
           </motion.div>
 
@@ -82,9 +93,7 @@ export default function HeroSection({ scale, opacity }) {
             transition={{ delay: 0.5 }}
             className="text-sm md:text-base text-white/50 font-normal leading-relaxed max-w-[450px]"
           >
-            Análista e Desenvolvedor de Sistemas, com foco em Desenvolvimento
-            Web, focado em criar soluções tecnológicas que resolvem problemas
-            reais.
+            {T.desc[lang]}
           </motion.p>
 
           {/* <motion.button

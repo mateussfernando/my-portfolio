@@ -12,6 +12,7 @@ import Background from "@/components/Background";
 import NavBar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
 import SkillsSection from "@/components/SkillsSection";
+import ExperienceSection from "@/components/ExperienceSection";
 import EducationSection from "@/components/EducationSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
@@ -33,6 +34,7 @@ export default function Home() {
       <NavBar />
       <HeroSection scale={scale} opacity={opacity} />
       <SkillsSection />
+      <ExperienceSection />
       <EducationSection />
       <ProjectsSection />
       <ContactSection />
