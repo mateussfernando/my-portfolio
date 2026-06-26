@@ -8,70 +8,76 @@ const TITLE = { pt: "Experiência", en: "Experience" };
 
 const EXPERIENCES = [
   {
-    role: { pt: "Desenvolvedor Web", en: "Web Developer" },
-    company: "Jogga Digital Performance",
-    period: "2025 — Presente",
-    tag: { pt: "Full Stack", en: "Full Stack" },
+    role: { pt: 'Desenvolvedor Web', en: 'Web Developer' },
+    company: 'Jogga Digital Performance',
+    period: '2025 — Presente',
+    tag: { pt: 'Full Stack', en: 'Full Stack' },
     icon: Code2,
     current: true,
     bullets: {
       pt: [
-        "Desenvolvimento, teste e integração de landing pages e CRMs personalizados com JavaScript e Next.js.",
-        "Consumo e criação de APIs RESTful.",
-        "Modelagem e operação de bancos de dados PostgreSQL.",
-        "Manutenção e implementação de novas funcionalidades em aplicações web com Node.js.",
-        "Versionamento de código e revisões no GitHub."
+        'Desenvolvimento, teste e integração de landing pages e CRMs personalizados com JavaScript e Next.js.',
+        'Consumo e criação de APIs RESTful.',
+        'Modelagem e operação de bancos de dados PostgreSQL.',
+        'Manutenção e implementação de novas funcionalidades em aplicações web com Node.js.',
+        'Versionamento de código e revisões no GitHub.',
       ],
       en: [
-        "Development, testing and integration of landing pages and custom CRMs with JavaScript and Next.js.",
-        "Consumption and creation of RESTful APIs.",
-        "Modeling and operation of PostgreSQL databases.",
-        "Maintenance and implementation of new features in web applications with Node.js.",
-        "Code versioning and reviews on GitHub."
-      ]
-    }
+        'Development, testing and integration of landing pages and custom CRMs with JavaScript and Next.js.',
+        'Consumption and creation of RESTful APIs.',
+        'Modeling and operation of PostgreSQL databases.',
+        'Maintenance and implementation of new features in web applications with Node.js.',
+        'Code versioning and reviews on GitHub.',
+      ],
+    },
   },
   {
-    role: { pt: "Residência Tecnológica", en: "Technology Residency" },
-    company: "Porto Digital",
-    period: "2024 — 2026",
-    tag: { pt: "SAP MM · Deloitte", en: "SAP MM · Deloitte" },
+    role: {
+      pt: 'Residência Tecnológica - SAP MM Delloite',
+      en: 'Technology Residency - SAP MM Delloite',
+    },
+    company: 'Porto Digital',
+    period: '2024 — 2026',
+    tag: { pt: 'SAP MM · Deloitte', en: 'SAP MM · Deloitte' },
     icon: Boxes,
     current: false,
     bullets: {
       pt: [
-        "Vivência prática no módulo de Materiais (SAP MM) em ambiente corporativo de grande porte.",
-        "Atuação em todo o ciclo de compras: requisição, pedido, MIGO e MIRO.",
-        "Compreensão sólida dos fluxos de compras, gestão de estoque e processos logísticos integrados."
+        'Vivência prática no módulo de Materiais (SAP MM) em ambiente corporativo de grande porte.',
+        'Atuação em todo o ciclo de compras: requisição, pedido, MIGO e MIRO.',
+        'Compreensão sólida dos fluxos de compras, gestão de estoque e processos logísticos integrados.',
       ],
       en: [
-        "Hands-on experience with the Materials module (SAP MM) in a large-scale corporate environment.",
-        "Involvement in the full procurement cycle: requisition, purchase order, MIGO and MIRO.",
-        "Solid understanding of procurement flows, inventory management and integrated logistics processes."
-      ]
-    }
+        'Hands-on experience with the Materials module (SAP MM) in a large-scale corporate environment.',
+        'Involvement in the full procurement cycle: requisition, purchase order, MIGO and MIRO.',
+        'Solid understanding of procurement flows, inventory management and integrated logistics processes.',
+      ],
+    },
   },
   {
-    role: { pt: "Quality Assurance (QA)", en: "Quality Assurance (QA)" },
-    company: "CESAR School",
-    period: "2024",
-    tag: { pt: "Projeto Prático", en: "Practical Project" },
+    role: {
+      pt: 'Residência Tecnológica - Testes de Qualidade (QA)',
+      en: 'Technology Residency - Quality Assurance (QA)',
+    },
+    company: 'CESAR School',
+    period: '2024',
+    tag: { pt: 'Projeto Prático', en: 'Practical Project' },
     icon: ShieldCheck,
     current: false,
     bullets: {
       pt: [
-        "Aplicação de testes funcionais e não funcionais em projeto prático.",
-        "Documentação de bugs e elaboração de casos de teste.",
-        "Uso de boas práticas de QA ao longo do ciclo de desenvolvimento."
+        'Aplicação de testes funcionais e não funcionais em projeto prático.',
+        'Documentação de bugs e elaboração de casos de teste.',
+        'Uso de boas práticas de QA ao longo do ciclo de desenvolvimento.',
       ],
       en: [
-        "Application of functional and non-functional testing in a practical project.",
-        "Bug documentation and test case design.",
-        "Use of QA best practices throughout the development cycle."
-      ]
-    }
-  }
-];
+        'Application of functional and non-functional testing in a practical project.',
+        'Bug documentation and test case design.',
+        'Use of QA best practices throughout the development cycle.',
+      ],
+    },
+  },
+]
 
 export default function ExperienceSection() {
   const { lang } = useLanguage();
