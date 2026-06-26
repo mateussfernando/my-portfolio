@@ -9,7 +9,7 @@ const TITLE = { pt: "Portifólio", en: "Portfolio" };
 
 const PROJECTS = [
   {
-    title: "Zêron AI",
+    title: "Zênon AI",
     description: {
       pt: "Chatbot próprio especializado em tecnologia e programação, utilizando React.js, Next.js (PWA), Node.js e a API do OpenRouter com o modelo Claude 3 Haiku. Projeto full stack com foco em integração de LLMs e comunicação eficiente com APIs RESTful.",
       en: "Custom chatbot specialized in technology and programming, using React.js, Next.js (PWA), Node.js and the OpenRouter API with the Claude 3 Haiku model. A full stack project focused on LLM integration and efficient communication with RESTful APIs."
