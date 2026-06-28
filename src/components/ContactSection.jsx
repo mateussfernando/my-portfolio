@@ -23,8 +23,8 @@ export default function ContactSection() {
   const { lang } = useLanguage();
 
   const LINKS = [
-    { icon: FaGithub, label: "GitHub", href: "https://github.com/mateusfernando" },
-    { icon: FaLinkedin, label: "LinkedIn", href: "https://linkedin.com/in/mateussfernando" },
+    { icon: FaGithub, label: "GitHub", href: "https://github.com/mateussfernando" },
+    { icon: FaLinkedin, label: "LinkedIn", href: "https://linkedin.com/in/mateusfernando" },
     { icon: FileText, label: T.resume[lang], href: "https://drive.google.com/file/d/1zoNVkt1BqDA2C0OpsRX76k51ghFnx3bp/view?usp=sharing" }
   ];
 
